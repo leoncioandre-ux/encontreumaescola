@@ -234,7 +234,7 @@ function atendeFiltro(e,filtro){return !filtro||partes(e.atendimento).some(x=>no
 function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
 
 function card(e,distancia){
-const integralVisual=e.integral==='Não'?'Parcial':(e.integral==='Sim'?'Integral':e.integral);
+const integralVisual=e.integral==='Não'?'Parcial':(e.integral==='Sim'?'Integral':(e.integral||''));
 const badges=[e.tipo,e.regiao,integralVisual].filter(Boolean).map(x=>`<span class="badge">${escapeHtml(x)}</span>`).join('');
 const etapas=e.etapas?`<div class="info"><span class="rotulo">Etapas / modalidades:</span> ${escapeHtml(e.etapas)}</div>`:'';
 const periodo=e.periodo?`<div class="info"><span class="rotulo">Período:</span> ${escapeHtml(e.periodo)}</div>`:'';
