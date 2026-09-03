@@ -36,33 +36,48 @@ button:hover{filter:brightness(.96)}.status{min-height:21px;margin-top:12px;colo
 @media(max-width:900px){.filtros{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.busca-linha,.filtros,.lista{grid-template-columns:1fr}.hero h1{font-size:25px}.container{padding:18px 12px 40px}}
 
 .contato-whatsapp{
-    margin:24px 0;
-    padding:18px 20px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    border:1px solid #d8e3dc;
-    border-radius:10px;
-    background:#f7faf8;
-}
-
-.contato-whatsapp span{
-    font-size:28px;
-}
-
-.contato-whatsapp strong{
+    margin:18px 0 20px;
+    padding:0;
     display:block;
-    margin-bottom:4px;
 }
 
-.contato-whatsapp a{
+.whatsapp-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:11px 17px;
+    background:#25D366;
+    color:#fff !important;
+    border-radius:8px;
+    text-decoration:none !important;
     font-weight:700;
-    text-decoration:none;
+    font-size:15px;
+    line-height:1.2;
+    box-sizing:border-box;
+    transition:filter .2s ease;
+}
+
+.whatsapp-btn:hover{
+    filter:brightness(.93);
+}
+
+.whatsapp-icon{
+    width:23px;
+    height:23px;
+    border:2px solid #fff;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    line-height:1;
+    color:#fff;
 }
 
 @media(max-width:700px){
-    .contato-whatsapp{
-        align-items:flex-start;
+    .whatsapp-btn{
+        width:100%;
+        justify-content:center;
     }
 }
 
@@ -175,6 +190,13 @@ button:hover{filter:brightness(.96)}.status{min-height:21px;margin-top:12px;colo
 <div class="sub">
 Selecione a etapa de ensino, a região e o turno desejados para consultar as unidades da Rede Municipal.
 </div>
+
+<section class="contato-whatsapp">
+    <a class="whatsapp-btn" href="https://wa.me/551637119282" target="_blank" rel="noopener">
+        <span class="whatsapp-icon" aria-hidden="true">◉</span>
+        <span>Fale conosco pelo WhatsApp, clique aqui</span>
+    </a>
+</section>
 
 <div class="filtros filtros-simples">
 
@@ -338,13 +360,7 @@ $('semResultados')
 renderLista();
 </script>
 
-<section class="contato-whatsapp">
-    <span>💬</span>
-    <div>
-        <strong>Fale conosco pelo WhatsApp</strong>
-        <a href="https://wa.me/551637119282" target="_blank" rel="noopener">Clique aqui</a>
-    </div>
-</section>
+
 
 
 <script>
